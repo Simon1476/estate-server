@@ -2,11 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "start": "node build/index.js",
-    "dev": "nodemon index.ts"
+    "start": "node build/app.js",
+    "dev": "nodemon app.ts"
   },
   "keywords": [],
   "author": "",
