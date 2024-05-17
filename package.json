@@ -4,11 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "generate":"npx prisma generate",
-    "build": "tsc --project tsconfig.build.json && npm run generate",
+    "build": "npm run generate && tsc --project tsconfig.build.json",
     "start": "node build/app.js",
     "dev": "nodemon app.ts",
-    "postinstall": "prisma generate"
+    "generate": "npx prisma generate" 
   },
   "keywords": [],
   "author": "",
