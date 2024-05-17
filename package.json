@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && prisma generate",
+    "build": "tsc --project tsconfig.build.json",
     "start": "node build/app.js",
-    "dev": "nodemon app.ts"
+    "dev": "nodemon app.ts",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,6 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.0",
-    "prisma": "^5.14.0",
     "sharp": "^0.33.3"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/multer": "^1.4.11",
     "@types/node": "^20.12.7",
+    "prisma": "^5.14.0",
     "typescript": "^5.4.5"
   }
 }
