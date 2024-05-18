@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app: Express = express();
-const PORT = process.env.PORT || 8800;
+const port = process.env.PORT_NUMBER || 8800;
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
@@ -22,6 +22,6 @@ app.use("/api/users", userRouter);
 app.use("/api/chats", chatRouter);
 app.use("/api/messages", messageRouter);
 
-app.listen(PORT, () => {
-  console.log(`[server]: Server is running at <https://localhost>:${PORT}`);
+app.listen(port, () => {
+  console.log(`[server]: Server is running at <https://localhost>:${port}`);
 });
